@@ -64,7 +64,6 @@ func (b *BstTS) delete(root *Node, val int) (n *Node) {
 		b.root = nil
 		return
 	} else if root.value == val && (root.left == nil || root.right == nil) {
-		// there's a better, cleaner way to do this in one line
 		var n1 *Node
 		if root.left != nil {
 			n1 = root.left
@@ -80,7 +79,6 @@ func (b *BstTS) delete(root *Node, val int) (n *Node) {
 			return root
 		}
 	} else if root.value == val && root.left != nil && root.right != nil {
-		// Needs to be implemented later
 	}
 	return nil
 }
